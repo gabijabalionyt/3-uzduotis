@@ -36,12 +36,14 @@ Studentai šioje versijoje skirstomi pagal 1-ąją strategiją: kiekvienas stude
  | 1000 |  10000 |  100000 | 1000000  |  10000000 |
  |-----:|:------:|:-------:|:--------:|----------:|
  |24 ms | 219  ms| 2508 ms | 24191 ms |492473  ms |
+ 
  Iš viso *(neskaitant paskutinio)* **26.942** s;
   
   **Naudojant Class Student**
    | 1000 |  10000 |  100000 | 1000000  |      10000000      |
    |-----:|:------:|:-------:|:--------:|-------------------:|
    |40 ms | 398  ms| 5004 ms | 43914 ms | neuzteko atminties |
+   
   Iš viso *(neskaitant paskutinio)* **49.356** s;
   
   Taigi, naudojant **Class Student** skirstymas ir spausdinimas užtruko šiek tiek ilgiau. Jis buna apie 2 kartus ilgesnis, bet failui didėjant tas skirtumas mažėja. Palyginus 100000 koeficientą gauname 1,995, o lyginant 1000000  koeficientas mažesnis - 1,815.
