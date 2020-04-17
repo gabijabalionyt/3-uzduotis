@@ -1,7 +1,7 @@
 # 3 užduotis. „Naujų tipų kūrimas ir jų naudojimas“
 [2 Užduoties](https://github.com/gabijabalionyt/2-uzduotis) tęsinys. Objektinis programavimas
 
-## [V1.1]()
+## [V1.1](https://github.com/gabijabalionyt/3-uzduotis/releases/tag/V1.1)
 
 Pirmoje trečiosios užduoties versijoje **struct Student** buvo pakeista į **class Student.**
 ```
