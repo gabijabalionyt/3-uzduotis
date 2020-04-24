@@ -92,4 +92,4 @@ Realizuoti išvesties, įvesties bei lyginimo operatoriai `class Student` objekt
             return !(*this == s);
         }
 ```
-Pačioje programoje naudotas įvesties s operatorius studento duomenims - vardui, pavardei bei egzamino - iš tekstinio failo skaitymui.
+Pačioje programoje naudotas įvesties operatorius studento duomenims - vardui, pavardei bei egzamino - iš tekstinio failo skaitymui.
