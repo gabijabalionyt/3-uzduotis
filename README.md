@@ -4,7 +4,7 @@
 ## [V1.1](https://github.com/gabijabalionyt/3-uzduotis/releases/tag/V1.1)
 
 Pirmoje trečiosios užduoties versijoje **struct Student** buvo pakeista į **class Student.**
-```
+```ruby
 class Student
 {
     private:
@@ -63,3 +63,33 @@ Studentai šioje versijoje skirstomi pagal 1-ąją strategiją: kiekvienas stude
  |Suma            |74,542 KB|66,076 KB|66,939 KB|
  
  Taigi iš analizės matome, kad naudojant O2 flag'ą programa veikia greičiausiai, o generuojami failai užima mažiausiai vietos.
+ 
+ 
+ 
+## [V1.2]()
+
+Antroje užduoties versijoje paprašyta realizuoti `Class Student` reikiamus ir tinkančius (turinčius prasmę) operatorius.Kadangi programoje nedirbama su dinamine atmintimi, nei *"Rule of 5"*, nei *"Rule of 3"* nebuvo realizuotos.
+
+Realizuoti išvesties, įvesties bei lyginimo operatoriai `class Student` objektams lyginti. (Būtų galima palyginti ar vartotojas to paties studento neįvedė kelis kartus)
+
+```ruby
+  friend std::ostream& operator << (std::ostream& out, Student& s)
+        {
+            out << s.Name_ << " " << s.Surname_ << " " << s.Exam_ << "\n";
+            return out;
+        }
+        friend std::istream& operator >> (std::istream& in, Student & s)
+        {
+            in >> s.Name_ >> s.Surname_ >> s.Exam_;
+            return in;
+        }
+        bool operator == (const Student & s)
+        {
+            return (Name_ == s.getName() && Surname_ == s.getSurname());
+        }
+        bool operator != (const Student & s)
+        {
+            return !(*this == s);
+        }
+```
+Pačioje programoje naudotas įvesties s operatorius studento duomenims - vardui, pavardei bei egzamino - iš tekstinio failo skaitymui.
