@@ -93,3 +93,15 @@ Realizuoti išvesties, įvesties bei lyginimo operatoriai `class Student` objekt
         }
 ```
 Pačioje programoje naudotas įvesties operatorius studento duomenims - vardui, pavardei bei egzamino - iš tekstinio failo skaitymui.
+
+
+```ruby
+...
+       while (std::getline(ReadFile, EntryLine))
+            {
+                std::istringstream ReadLine (EntryLine);
+                ReadLine >> Stud;
+...
+            }
+....
+```
