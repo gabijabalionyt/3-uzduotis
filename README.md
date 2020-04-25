@@ -48,21 +48,16 @@ Studentai šioje versijoje skirstomi pagal 1-ąją strategiją: kiekvienas stude
   
   Taigi, naudojant **Class Student** skirstymas ir spausdinimas užtruko šiek tiek ilgiau. Jis buna apie 2 kartus ilgesnis, bet failui didėjant tas skirtumas mažėja. Palyginus 100000 koeficientą gauname 1,995, o lyginant 1000000  koeficientas mažesnis - 1,815.
   **Spartos analizė naudojant Flag'us O1, O2, O3**
-   |Flag| 1000 |  10000 |  100000 | 1000000  |      10000000      |  Suma  |
-   |----|-----:|:------:|:-------:|:--------:|:------------------:|-------:|
-   | O1 |28 ms | 244  ms| 1563 ms | 23014 ms | neuzteko atminties |24,847 s|
-   | O2 |23 ms | 267  ms| 1751 ms | 21888 ms | neuzteko atminties |23,929 s|
-   | O3 |30 ms | 206  ms| 1757 ms | 22604 ms | neuzteko atminties |24,597 s|
+   |Flag| 1000 |  10000 |  100000 | 1000000  |      10000000      |  Suma |
+   |----|-----:|:------:|:-------:|:--------:|:------------------:|------:|
+   | O1 |28 ms | 304  ms| 3205 ms | 5657 ms  | neuzteko atminties |9,194 s|
+   | O2 |28 ms | 287  ms| 3203 ms | 6029 ms  | neuzteko atminties |9,547 s|
+   | O3 |28 ms | 292  ms| 3307 ms | 5713 ms  | neuzteko atminties |9,340 s|
 
- |                |   O1    |   O2    |   O3    |
- |----------------|--------:|:-------:|--------:|
- |File1000.txt    |59 KB    |55 KB    |48 KB    |
- |File10000.txt   |561 KB   |479 KB   |499 KB   |
- |File100000.txt  |5,799 KB |5,603 KB |4,401 KB |
- |File1000000.txt |68,143 KB|59,939 KB|61,991 KB|
- |Suma            |74,542 KB|66,076 KB|66,939 KB|
+ |                 |O1 | O2| O3|
+ |-----------------|--:|:-:|--:|
+ |V1.1.exe dydis KB|892|894|900|
  
- Taigi iš analizės matome, kad naudojant O2 flag'ą programa veikia greičiausiai, o generuojami failai užima mažiausiai vietos.
  
  
  
