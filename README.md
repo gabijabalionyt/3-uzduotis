@@ -159,7 +159,8 @@ class Student : public Person
 ```
 Sakykime, kas nors nori sukurti `Class Person` tipo objektą
 
-``` Person P ("Gabija", "Balionytė")
+``` 
+Person P ("Gabija", "Balionytė")
 ```
 Vartotojui sistema išmestų klaidą.
 
