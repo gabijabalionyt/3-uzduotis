@@ -66,7 +66,7 @@ Studentai šioje versijoje skirstomi pagal 1-ąją strategiją: kiekvienas stude
  
  
  
-## [V1.2]()
+## [V1.2](https://github.com/gabijabalionyt/3-uzduotis/releases/tag/V1.2)
 
 Antroje užduoties versijoje paprašyta realizuoti `Class Student` reikiamus ir tinkančius (turinčius prasmę) operatorius.Kadangi programoje nedirbama su dinamine atmintimi, nei *"Rule of 5"*, nei *"Rule of 3"* nebuvo realizuotos.
 
@@ -105,3 +105,69 @@ Pačioje programoje naudotas įvesties operatorius studento duomenims - vardui, 
             }
 ....
 ```
+## [V1.5] ()
+
+Trečioje šios užduoties versijoje klasė `class Student` buvo išskaidyta į dvi klases - `Class Person` (*Base klasė*) ir `Class Student` (*Derived klasė*)
+
+```ruby
+
+class Person
+{
+    protected:
+        std::string Name_;
+        std::string Surname_;
+        Person (std::string aName = " ", std::string aSurname = " ") : Name_{aName}, Surname_{aSurname} { }
+    public:
+        virtual std::string getName() const { return Name_; }
+        virtual  std::string getSurname() const { return Surname_; }
+        virtual ~Person () = 0;
+};
+
+class Student : public Person
+{
+    private:
+        int Exam_;
+        std::vector<int> Homework_;
+    public:
+        Student (std::string aName = " ", std::string aSurname = " ", int ExamScore = 0) : Person{aName, aSurname}, Exam_{ExamScore} { }
+        void setHomework(int);
+        int getSize() const { return Homework_.size(); }
+        void EmptyHomework();
+        double FinalMark (int, double );
+        double FinalMark (int, const std::vector<int>);
+        double FinalMark (double (*) (std::vector<int>));
+        friend std::ostream& operator << (std::ostream& out, Student& s)
+        {
+            out << s.Name_ << " " << s.Surname_ << " " << s.Exam_ << "\n";
+            return out;
+        }
+        friend std::istream& operator >> (std::istream& in, Student & s)
+        {
+            in >> s.Name_ >> s.Surname_ >> s.Exam_;
+            return in;
+        }
+        bool operator == (const Student & s)
+        {
+            return (Name_ == s.getName() && Surname_ == s.getSurname());
+        }
+        bool operator != (const Student & s)
+        {
+            return !(*this == s);
+        }
+};
+
+```
+Sakykime, kas nors nori sukurti `Class Person` tipo objektą
+
+``` Person P ("Gabija", "Balionytė")
+```
+Vartotojui sistema išmestų klaidą.
+
+Kuriant `Class Student` problemų nekiltų:
+```
+Student Stud ("Gabija", "Balionytė",8);
+std::cout << Stud;
+```
+
+Būtų išspausdinama:
+**Gabija Balionytė 8**
