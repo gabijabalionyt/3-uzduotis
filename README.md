@@ -105,7 +105,7 @@ Pačioje programoje naudotas įvesties operatorius studento duomenims - vardui, 
             }
 ....
 ```
-## [V1.5](https://github.com/gabijabalionyt/3-uzduotis/releases/tag/V1.5)
+## [V1.5](https://github.com/gabijabalionyt/3-uzduotis/releases/tag/V1.5.1)
 
 Trečioje šios užduoties versijoje klasė `class Student` buvo išskaidyta į dvi klases - `Class Person` (*Base klasė*) ir `Class Student` (*Derived klasė*)
 
