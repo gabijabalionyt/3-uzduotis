@@ -111,49 +111,22 @@ Trečioje šios užduoties versijoje klasė `class Student` buvo išskaidyta į 
 
 ```ruby
 
+
 class Person
 {
-    protected:
-        std::string Name_;
-        std::string Surname_;
-        Person (std::string aName = " ", std::string aSurname = " ") : Name_{aName}, Surname_{aSurname} { }
-    public:
-        virtual std::string getName() const { return Name_; }
-        virtual  std::string getSurname() const { return Surname_; }
-        virtual ~Person () = 0;
-};
 
-class Student : public Person
-{
-    private:
-        int Exam_;
-        std::vector<int> Homework_;
-    public:
-        Student (std::string aName = " ", std::string aSurname = " ", int ExamScore = 0) : Person{aName, aSurname}, Exam_{ExamScore} { }
-        void setHomework(int);
-        int getSize() const { return Homework_.size(); }
-        void EmptyHomework();
-        double FinalMark (int, double );
-        double FinalMark (int, const std::vector<int>);
-        double FinalMark (double (*) (std::vector<int>));
-        friend std::ostream& operator << (std::ostream& out, Student& s)
-        {
-            out << s.Name_ << " " << s.Surname_ << " " << s.Exam_ << "\n";
-            return out;
-        }
-        friend std::istream& operator >> (std::istream& in, Student & s)
-        {
-            in >> s.Name_ >> s.Surname_ >> s.Exam_;
-            return in;
-        }
-        bool operator == (const Student & s)
-        {
-            return (Name_ == s.getName() && Surname_ == s.getSurname());
-        }
-        bool operator != (const Student & s)
-        {
-            return !(*this == s);
-        }
+protected:
+    string Name_;
+    string Surname_;
+
+public:
+    Person(string, string);
+    Person();
+    ~Person();
+    virtual void setName(string) = 0;
+    virtual void setSurname(string) = 0;
+    string getName() const;
+    string getSurname() const;
 };
 
 ```
@@ -172,3 +145,4 @@ std::cout << Stud;
 
 Būtų išspausdinama:
 **Gabija Balionytė 8**
+
