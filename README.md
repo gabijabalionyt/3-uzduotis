@@ -1,6 +1,25 @@
 # 3 užduotis. „Naujų tipų kūrimas ir jų naudojimas“
 [2 Užduoties](https://github.com/gabijabalionyt/2-uzduotis) tęsinys. Objektinis programavimas
 
+## Įdiegimo ir naudojimosi instrukcija
+• *Norinti gauti programą pirmiausia reikia parsisiųsti vieną iš jos versijų iš [Releases](https://github.com/gabijabalionyt/3-uzduotis/releases) *
+
+• *Parsisiųsti ir įsidiegti C++ kompiliatorių (pvz. GCC)*
+
+• *Atsidaryti terminalą ir jame įvesti programos vietą diske*
+
+• *Sukompiliuoti programą, pvz*
+
+  *Jei naudojate GCC su GNU Make, įrašykite komandą make*
+  *Jei naudojate GCC be GNU Make, įrašykite:*
+  
+  *g++ -c main.cpp funkcijos.cpp*
+
+  *g++ -o main main.o funkcijos.o*
+
+• *Programos naudojimasis bus paprastas, nes visi nurodymai bus parodomi ekrane.*
+
+
 ## [V1.1](https://github.com/gabijabalionyt/3-uzduotis/releases/tag/V1.1)
 
 Pirmoje trečiosios užduoties versijoje **struct Student** buvo pakeista į **class Student.**
