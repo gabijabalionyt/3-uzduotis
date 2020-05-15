@@ -143,3 +143,41 @@ std::cout << Stud;
 
 Būtų išspausdinama:
 **Gabija Balionytė 8**
+
+
+## [V2.0]()
+
+Paskutinei versijai buvo prašoma naudoti **Doxygen** dokumentaciją. Atlikus veiksmus dokumentaciją galima rasti atskirame aplankale.
+
+**Unit Test'ai** buvo atlikti naudojant Catch2 framework'ą. Viskas, ką reikia atlikti, tai pridėti header failą ir parašyti keletą testų. Kadangi užtenka pademonstruoti, kad supratome, testai nėra sudėtingi.
+
+```ruby
+ TEST_CASE("Final Mark") {
+
+	REQUIRE(FinalResult(5.1, 7) == 6.24);
+	REQUIRE(FinalResult(4.1, 10) == 7.64);
+	REQUIRE(FinalResult(9.2, 4) == 6.08);
+	REQUIRE(FinalResult(8.5, 9) == 8.8);
+	REQUIRE(FinalResult(8.5, 3) == 5.2);
+
+}
+
+TEST_CASE("If student Passed test") {
+
+	REQUIRE(IfPassed(9) == true);
+	REQUIRE(IfPassed(4) == false);
+	REQUIRE(IfPassed(10) == true);
+	REQUIRE(IfPassed(7) == true);
+	REQUIRE(IfPassed(5) == true);
+
+}
+TEST_CASE("If student Failed test") {
+
+	REQUIRE(IfFailed(7) == false);
+    REQUIRE(IfFailed(5) == false);
+	REQUIRE(IfFailed(4) == true);
+	REQUIRE(IfFailed(1) == true);
+	REQUIRE(IfFailed(3) == true);
+
+}
+```
