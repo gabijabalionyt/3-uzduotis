@@ -164,7 +164,7 @@ Būtų išspausdinama:
 **Gabija Balionytė 8**
 
 
-## [V2.0]()
+## [V2.0](https://github.com/gabijabalionyt/3-uzduotis/releases/tag/V2.0.1)
 
 Paskutinei versijai buvo prašoma naudoti **Doxygen** dokumentaciją. Atlikus veiksmus dokumentaciją galima rasti atskirame aplankale.
 
